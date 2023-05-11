@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- esta linha faz com que não seja possivel dar zoom em celulares -->
+    <title>Aplicativo previsão do tempo:::lucasdev.site</title>
+    <link rel="shortcut icon" href="https://lucasdev.site/assets/imagens/icon.ico">
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+
+    </style><!-- coloque aqui no style todas as fontes importadas -->
+</head>
+
+<body class="text-white d-flex justify-content-start align-items-center flex-column body m-0 p-0" id="corpo">
+
+    <div class="d-flex justify-content-start align-items-start p-0 m-0 fundo">
+        
+        <div class="col-1 ladoesquerdo d-flex flex-column justify-space-around">
+            <div class="formulario container d-flex justify-content-center align-items-center">
+                <form id="formulario" class="row g-3 d-flex justify-content-center align-items-center flex-row p-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p class="titulo">Digite o nome de uma cidade: </p>
+                    </div>
+                    <div class="col-auto">
+                        <label for="inputPassword2" class="visually-hidden">nomedacidade</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="Ex: São Paulo">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" id="botao" class="btn btn-primary">PESQUISAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card hide" id="infos">
+                <div class="container col d-flex align-items-center justify-content-start container-nomecidade">
+                    <div class="col-1 card-esquerdo d-flex justify-content-end align-items-center">
+                        <img src="./assets/imagens/location.svg">
+                    </div>
+                    <div class="col-1 card-direito d-flex justify-content-start align-items-center">
+                        
+                        <div class="">
+                            <small id="nomedacidade"></small>
+                        </div>
+                        
+                       
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="container col d-flex align-items-center justify-content-center">
+                    <img id="imagem" src="">
+                    <small class="descricao" id="nuvens"></small>
+                </div>
+                <div class="container col d-flex align-items-center justify-content-start">
+                    <div class="col-1 card-esquerdo d-flex justify-content-end align-items-center">
+                        
+                    </div>
+                    <div class="col-1 card-direito d-flex justify-content-start align-items-center">
+                        <small class="temperatura" id="graus">
+
+                        </small>
+                    </div>
+                </div>
+
+                <div class="container col d-flex align-items-center justify-content-start">
+                    <div class="col-1 card-esquerdo d-flex justify-content-end align-items-center">
+                        <img src="./assets/imagens/longi-lat.svg">
+                    </div>
+                    <div class="col-1 card-direito d-flex justify-content-start align-items-center">
+                        <div class="d-flex flex-column cordenadas">
+                            <small class="descricao">Long: <small class="descricao" id="longitude">---</small></small>
+                        <small class="descricao">Lat: <small class="descricao" id="latitude">---</small>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="container col d-flex align-items-center justify-content-start">
+                    <div class="col-1 card-esquerdo d-flex justify-content-end align-items-center">
+                        <img src="./assets/imagens/ventos.svg">
+                    </div>
+                    <div class="col-1 card-direito d-flex justify-content-start align-items-center">
+                        <div class="d-flex flex-column cordenadas">
+                            <small class="descricao">Velocidade dos ventos:</small>
+                        <small class="descricao"><small  id="velocidade">0</small> Km/h</small>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="container-xl col d-flex align-items-center justify-content-start">
+                    <div class="col-1 card-esquerdo d-flex justify-content-end align-items-center">
+                        <img src="./assets/imagens/sol.png">
+                    </div>
+                    <div class="col-1 card-direito d-flex justify-content-start align-items-center">
+                        <div class="d-flex flex-column cordenadas">
+                            <small class="descricao">Nascer do sol: <small id="nascer" class="descricao"></small></small>
+                        <small class="descricao">Pôr do sol: <small id="por" class="descricao"></small></small>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                
+                <div class="card">
+                    <div class="container col d-flex align-items-center justify-content-start">
+                        <div class="col-1 card-esquerdo d-flex justify-content-end align-items-center">
+                            <img src="./assets/imagens/calendario.svg">
+                        </div>
+                        <div class="col-1 card-direito d-flex justify-content-start align-items-center">
+                            <div class="d-flex flex-column cordenadas">
+                                <small class="descricao"><small class="nomedodia descricao"></small>,
+                                <small class="numerododia descricao"></small> de <small class="nomedomes descricao"></small> de <smal class="nomedoano descricao"></smal>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card container m-auto text-center links">
+                    <p>Criado por:</p>
+                    <p><a href="https://lucasdev.site" target="_blank">lucasdev.site</a> - <a href="https://www.linkedin.com/in/lucas-de-oliveira-bb883a214" target="_blank">Linkedin</a> - <a href="https://github.com/OliveiraLucaz" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <!-- Coloque aqui o rodapé do site, todas as informações finais dele  -->
+    </footer>
+    <script type="text/javascript" src="assets/js/script.js" defer></script>
+    <script type="text/javascript" src="assets/js/data.js" defer></script>
+    <script type="text/javascript" src="assets/js/unsplash.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</body>
+
+</html>
